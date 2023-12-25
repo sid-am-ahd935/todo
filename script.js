@@ -5,8 +5,8 @@ async function fetchTasks() {
       const data = await response.text();
       const tasks = data.split('\n');
       tasks.pop();
-      if (!splitArray || splitArray.length === 0) {
-        splitArray = []; // Reassign an empty array if it becomes undefined or empty
+      if (!tasks || tasks.length === 0) {
+        tasks = []; // Reassign an empty array if it becomes undefined or empty
       }
       const tasksList = document.getElementById('tasksList');
       tasks.forEach(task => {
