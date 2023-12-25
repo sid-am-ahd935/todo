@@ -1,0 +1,63 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#tasksList {
+    list-style: none;
+    padding: 0;
+}
+
+#tasksList li {
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#tasksList li:hover {
+    background-color: #eaeaea;
+    transform: translateY(-3px);
+}
+
+/* Add some color to alternating list items for better readability */
+#tasksList li:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Add a subtle animation for list item appearance */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to list items */
+#tasksList li {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+/* Apply animation delay to each list item */
+#tasksList li:nth-child(odd) {
+    animation-delay: 0.1s;
+}
+
+#tasksList li:nth-child(even) {
+    animation-delay: 0.2s;
+}
