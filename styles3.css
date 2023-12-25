@@ -1,0 +1,88 @@
+/* Common styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+#tasksList {
+    list-style: none;
+    padding: 0;
+}
+
+/* Heading styles */
+.heading {
+    color: #fff; /* White text color */
+    font-size: 48px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Added text-shadow transition */
+}
+
+/* Heading hover effects */
+.heading:hover {
+    transform: translateY(-8px); /* Lift the heading upward */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8); /* Increased text shadow for more visibility */
+}
+
+#tasksList li {
+    background-color: #ffd700; /* Vibrant yellow */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#tasksList li:nth-child(even) {
+    background-color: #ff6a00; /* Bright orange */
+}
+
+#tasksList li:hover {
+    background-color: #ff8c00; /* Lighter orange on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading hover effects */
+.heading:hover {
+    transform: rotate(calc(10deg + 20deg * var(--rotate)));
+    text-shadow: 2px 2px 4px black;
+}
+
+/* Animation for heading background color */
+.heading {
+    background: linear-gradient(to right, #ff4b2b, #ff416c); /* Gradient from red to pink */
+    animation: changeHeadingColor 2s linear infinite;
+}
+
+/* Heading background color animation */
+@keyframes changeHeadingColor {
+    0%, 100% { background-color: #ff4b2b; } /* Initial and final color */
+    25% { background-color: #ff416c; } /* Color change */
+    50% { background-color: #fc8d72; } /* Color change */
+    75% { background-color: #ffb16d; } /* Color change */
+}
+
+/* Shift next elements downward */
+.heading:hover + #tasksList {
+    transform: translateY(50px);
+}
+
+/* Animation for changing text color */
+@keyframes changeTextColor {
+    0% { color: #ff4b2b; } /* Initial color */
+    25% { color: #ff416c; } /* Color change */
+    50% { color: #fc8d72; } /* Color change */
+    75% { color: #ffb16d; } /* Color change */
+    100% { color: #ff4b2b; } /* Back to initial color */
+}

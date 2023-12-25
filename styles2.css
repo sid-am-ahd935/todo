@@ -62,3 +62,25 @@ h1 {
 #tasksList li:nth-child(even) {
     animation-delay: 0.2s;
 }
+
+/* Styles for the heading element */
+.heading {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    transform: rotate(-3deg);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Styles for task items */
+  .tasksList {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #444;
+  }

@@ -1,0 +1,68 @@
+/* Common styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 40px;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+/* Heading styles */
+.heading {
+    color: ivory; /* Initial color */
+    font-size: 52px; /* Increased font size */
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Added text-shadow transition */
+    /* animation: changeTextColor 5s linear infinite; Text color animation */
+    animation: changeHeadingColor 5s linear infinite;
+}
+
+/* Task list styles */
+#tasksList {
+    list-style: none;
+    padding: 0;
+    font-size: 20px; /* Increased font size */
+}
+
+#tasksList li {
+    background-color: #ffd700; /* Vibrant yellow */
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    font-size: 18px; /* Adjusted font size */
+}
+
+#tasksList li:nth-child(even) {
+    background-color: #ff6a00; /* Bright orange */
+}
+
+#tasksList li:hover {
+    background-color: #ff8c00; /* Lighter orange on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading hover effects */
+.heading:hover {
+    transform: translateY(-8px); /* Lift the heading upward */
+    text-shadow: 2px 2px 4px black; /* Increased text shadow for more visibility */
+    animation-play-state: paused; /* Pause animation on hover */
+}
+
+/* Heading background color animation */
+@keyframes changeHeadingColor {
+    0%, 100% { background-color: #ff4b2b; } /* Initial and final color */
+    25% { background-color: #ff416c; } /* Color change */
+    50% { background-color: #fc8d72; } /* Color change */
+    75% { background-color: #ffb16d; } /* Color change */
+}
