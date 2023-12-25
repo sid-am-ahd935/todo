@@ -1,18 +1,20 @@
-function addTask() {
-  const taskInput = document.getElementById('taskInput');
-  const taskList = document.getElementById('taskList');
+// Function to fetch and display tasks
+async function fetchTasks() {
+  try {
+      const response = await fetch('https://raw.githubusercontent.com/sid-am-ahd935/todo/main/tasks.txt'); // Replace with your actual URL
+      const data = await response.text();
+      const tasks = data.split('\n');
 
-  if (taskInput.value !== '') {
-    const task = document.createElement('li');
-    task.innerText = taskInput.value;
-
-    task.addEventListener('click', function () {
-      task.classList.toggle('completed');
-    });
-
-    taskList.appendChild(task);
-    taskInput.value = '';
-  } else {
-    alert('Please enter a task!');
+      const tasksList = document.getElementById('tasksList');
+      tasks.forEach(task => {
+          const listItem = document.createElement('li');
+          listItem.textContent = task;
+          tasksList.appendChild(listItem);
+      });
+  } catch (error) {
+      console.error('Error fetching tasks:', error);
   }
 }
+
+// Call the function when the page loads
+window.onload = fetchTasks;

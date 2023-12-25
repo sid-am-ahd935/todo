@@ -1,40 +1,28 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 40px;
   background-color: #f4f4f4;
 }
 
-.container {
-  width: 80%;
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+h1 {
+  color: #333;
+  text-align: center;
 }
 
-input[type="text"] {
-  padding: 8px;
-  width: 60%;
-  margin-right: 10px;
-}
-
-button {
-  padding: 8px 15px;
-  background-color: #4caf50;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-ul {
-  list-style-type: none;
+#tasksList {
+  list-style: none;
   padding: 0;
 }
 
-li {
-  margin-bottom: 8px;
+#tasksList li {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.completed {
-  text-decoration: line-through;
-  opacity: 0.6;
+#tasksList li:hover {
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
 }
