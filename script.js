@@ -1,10 +1,13 @@
 // Function to fetch and display tasks
 async function fetchTasks() {
   try {
-      const response = await fetch('https://raw.githubusercontent.com/sid-am-ahd935/todo/main/tasks.txt'); // Replace with your actual URL
+      const response = await fetch('https://raw.githubusercontent.com/sid-am-ahd935/tasklist/main/dsa-tasks.txt'); // Replace with your actual URL
       const data = await response.text();
       const tasks = data.split('\n');
-
+      tasks.pop();
+      if (!splitArray || splitArray.length === 0) {
+        splitArray = []; // Reassign an empty array if it becomes undefined or empty
+      }
       const tasksList = document.getElementById('tasksList');
       tasks.forEach(task => {
           const listItem = document.createElement('li');
