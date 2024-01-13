@@ -31,11 +31,13 @@ fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`.trim())
 
             // Create and style task items
             tasks.forEach(task => {
-              const listItem = document.createElement('li');
-              listItem.textContent = task;
-              listItem.classList.add('task-item'); // Apply 'task-item' class
+              if(task.trim() != "") {
+                const listItem = document.createElement('li');
+                listItem.textContent = task;
+                listItem.classList.add('task-item'); // Apply 'task-item' class
 
-              tasksList.appendChild(listItem);
+                tasksList.appendChild(listItem);
+              }
             });
           }
         }
